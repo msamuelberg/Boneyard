@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvnqoes5psfn"]
+
+[ext_resource type="PackedScene" uid="uid://cphamakdcrq2q" path="res://dinoarm.glb" id="1_yp1ca"]
+[ext_resource type="Script" path="res://swingtwist_decomposition.gd" id="2_5e8c7"]
+
+[node name="dinoarm" instance=ExtResource("1_yp1ca")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/3/rotation = Quaternion(0, 0, 0.191098, 0.981571)
+bones/4/rotation = Quaternion(0.000474975, 0.000474975, 0.000474975, 1.00048)
+bones/5/rotation = Quaternion(0.000474975, 0.000474975, 0.000474975, 1.00048)
+script = ExtResource("2_5e8c7")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "HandRotating"
+speed_scale = 0.5

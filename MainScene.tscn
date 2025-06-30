@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6qxh02cen5g2"]
+
+[ext_resource type="PackedScene" uid="uid://dtvnqoes5psfn" path="res://dinoarm.tscn" id="1_gv2tq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3ceks"]
+
+[sub_resource type="Sky" id="Sky_cabkw"]
+sky_material = SubResource("ProceduralSkyMaterial_3ceks")
+
+[sub_resource type="Environment" id="Environment_1n36g"]
+background_mode = 2
+sky = SubResource("Sky_cabkw")
+
+[node name="MainScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.764898, 0.525378, -0.372706, 0, 0.578599, 0.815612, 0.644152, -0.62386, 0.442569, -3.29957, 5.1378, 2.36961)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1n36g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.89671, 0.163645, -0.411258, 0.289141, 0.486923, 0.824199, 0.335127, -0.857978, 0.389312, -4.30306, 4.91773, 3.37193)
+
+[node name="dinoarm" parent="." instance=ExtResource("1_gv2tq")]
