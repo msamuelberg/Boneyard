@@ -18,8 +18,6 @@ var elbow_bone_idx: int
 var hand_bone_idx: int
 var twist_bone_indices: Array[int] = []
 
-# git testing TESTING SSH
-
 func _ready():
 	setup_bones()
 
